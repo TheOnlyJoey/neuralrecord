@@ -95,6 +95,7 @@ void PluginNeuralCapture::initProgramName(uint32_t index, String& programName) {
 */
 void PluginNeuralCapture::sampleRateChanged(double newSampleRate) {
     fSampleRate = newSampleRate;
+    profil->set_samplerate(newSampleRate, profil); // init the DSP class
 }
 
 /**

@@ -433,6 +433,8 @@ void Profil::disc_stream() {
         close_stream(&recfile);
         filesize = 0;
         if (!time_match) {
+            errors = 5.0;
+            setOutputParameterValue(ERRORS, errors);
             std::remove(outputfile.c_str());
         }
     }
