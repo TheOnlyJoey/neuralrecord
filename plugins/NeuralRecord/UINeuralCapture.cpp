@@ -82,6 +82,8 @@ void UINeuralCapture::parameterChanged(uint32_t index, float value) {
                 fToolTip->setLabel("Error: Sample Rate mismatch, please use 48kHz");
             else if ((int)value == 4) 
                 fToolTip->setLabel(inputFile.c_str());
+            else if ((int)value == 5) 
+                fToolTip->setLabel("Error: Output timing does not match, deleting result.wav");
 
             break;
     }
